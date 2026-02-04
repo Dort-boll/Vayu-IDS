@@ -5,13 +5,14 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   define: {
-    'process.env.API_KEY': JSON.stringify(process.env.API_KEY || 'no-key-required'),
+    // This allows process.env.API_KEY to be used in the client code
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY || ''),
   },
   build: {
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: false,
-    minify: 'terser',
+    // Using default minifier (esbuild) instead of terser to avoid extra dependency issues
     rollupOptions: {
       output: {
         manualChunks: {
