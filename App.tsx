@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { Threat, NeuralStats, ThreatSeverity } from './types';
 import { NeuralBus } from './services/threatFeed';
@@ -118,7 +117,7 @@ const App: React.FC = () => {
   if (isBooting) {
     return (
       <div className="min-h-screen bg-[#010208] flex flex-col items-center justify-center font-mono text-cyan-500 overflow-hidden p-6">
-        <div className="text-4xl md:text-7xl font-black italic mb-2 animate-pulse tracking-[0.3em] md:tracking-[0.5em] text-white drop-shadow-[0_0_15px_#00d4ff] text-center">VAYU.IX</div>
+        <div className="text-4xl md:text-7xl font-black italic mb-2 animate-pulse tracking-[0.3em] md:tracking-[0.5em] text-white drop-shadow-[0_0_15px_#00d4ff] text-center">VAYU IDS</div>
         <div className="text-[8px] md:text-[10px] uppercase tracking-[0.5em] md:tracking-[1em] mb-12 opacity-30 text-center">ABUSE.CH_UPLINK_STABILIZING</div>
         <div className="w-64 md:w-80 h-0.5 bg-white/5 rounded-full overflow-hidden relative">
           <div className="h-full bg-cyan-400 shadow-[0_0_15px_#00d4ff] animate-[loading_0.8s_ease-in-out]"></div>
